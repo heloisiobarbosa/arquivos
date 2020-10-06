@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+        title: Text('entreterimento'),
+      )),
+      body: MyClassApp(),
+    );
+  }
+}
+
+class MyClassApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Column(
+        children: <Widget>[
+          ListTile(
+             leading: Icons.music_note),
+             title: Text('Sweet Child O Mine'),
+             subtitle: Text('Artista: Guns N Roses'),
+             trailing: Icon(Icons.favorite_border),
+           ),
+          ListTile(
+             leading: Icons.movie),
+             title: Text('Rambo'),
+             subtitle: Text('Diretor: Sylvester Stallone'),
+             trailing: Icon(Icons.favorite_border),
+           ),
+                                       
+         ]
+      ),
+    );
+  }
+}
